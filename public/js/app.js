@@ -1,34 +1,19 @@
 $.getJSON("http://pokeapi.co/api/v2/pokemon/",
-	function (response) {
+ function (response) {
 	var pokemons = response.results;
 	crearPokemons(pokemons);
 });
 
-// var xhr = new XMLHttpRequest();
 
-// xhr.onreadystatechange = function (e) {
-// 	if (this.readyState === 4) {
-// 		if (this.status === 200) {
-			// var response = JSON.parse(this.response);
-			// var pokemons = response.results;
-			// var squads = JSON.parse(this.response);
-			// crearPokemons(pokemons);
-// 		}
 
-// 	}
-// };
-
-// xhr.open("GET", "http://pokeapi.co/api/v2/pokemon/");
-
-// xhr.send();
-
-function crearPokemons(pokemons) {
-	var ul = document.getElementById("pokemons");
+var crearPokemons = function (pokemons) {
+	var div =$("#pokemons");
 
 	pokemons.forEach(function (pokemon) {
-		var li = document.createElement("li");
-		li.textContent = pokemon.name;
+		var span = $('<span/>', { 'class': 'col s2 margen__pokemon'  });
+	 span.text(pokemon.name);
 
-		ul.appendChild(li);
+		div.append(span);
 	});
+
 }
