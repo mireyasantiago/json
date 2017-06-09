@@ -1,0 +1,22 @@
+{
+  "name": "pokemones",
+  "version": "1.0.0",
+  "description": "Creando lista de pokemones con JSON",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mireyasantiago/json.git"
+  },
+  "author": "mireya lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mireyasantiago/json/issues"
+  },
+  "homepage": "https://github.com/mireyasantiago/json#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
